@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK1</title>
+    <style>
+        #container {
+            display: flex;
+        }
+
+        #top-container {
+            width: 1050px;
+            border: 1px solid gray;
+            background-color: whitesmoke transparent;
+            box-shadow: 4px 4px 10px grey;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            font-size: 30px;
+
+        }
+
+        #left-section {
+            width: 20%;
+            background-color: bisque;
+            border-right: 2px solid #ccc;
+            padding-right: 20px;
+            padding-left: 5px;
+        }
+
+        #main-section {
+            flex: 1;
+            background-color: rgb(218, 193, 241);
+            justify-content: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSfk1xJTrrlyE5gYriQlUTB1frpRz3ornCk-s1TW-fTkO7ozXz0P2B54&s=10);
+            background-attachment: fixed;
+            padding-left: 20px;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            padding: 20px;
+            width: 250px;
+            border: 1px solid gray;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 4px 4px 10px grey;
+        }
+
+        .image {
+            height: 180px;
+            background: lightpink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .details {
+            padding: 15px;
+        }
+
+        .button {
+            border-top: 1px solid gray;
+            padding: 10px;
+        }
+
+        .product {
+            justify-content: center;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .header {
+            justify-content: center;
+            padding: 50px;
+        }
+
+        aside ul {
+
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        aside li {
+
+            border: 1px solid #090909;
+            padding: 15px;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        nav {
+            background-color: #c7afaf;
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #131212;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #eb5555;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+    </nav>
+    <div id="container">
+        <aside id="left-section">
+            <h2>Welcome to Scoops !</h2>
+            <ul>
+                <li>Mini Cup</li>
+                <li>Jumbo cup</li>
+                <li>Cone</li>
+                <li>Stick</li>
+                <li>Bytes</li>
+            </ul>
+        </aside>
+        <main id="main-section">
+            <div class="header">
+                <div id="top-container">
+                    <h1>Scoops Ice Cream</h1>
+                </div>
+            </div>
+            <div class="product">
+                <div class="card">
+                    <div class="image">
+                        <img src="https://www.milkmaid.in/sites/default/files/2022-12/Chocolate-Ice-Cream-335x300.jpg"
+                            alt="chocolate">
+                    </div>
+                    <div class="details">
+                        <h2>Chocolate</h2>
+                        <h3>Rs.50</h3>
+                    </div>
+                    <div class="button">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://www.simplysated.com/wp-content/uploads/2014/08/Homemade-Vanilla-Ice-Cream-A22-1-P7270022.jpg"
+                            alt="Vanilla">
+                    </div>
+                    <div class="details">
+                        <h2>Vanilla</h2>
+                        <h3>Rs.35</h3>
+                    </div>
+                    <div class="button">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://wearenotmartha.com/wp-content/uploads/white-chocolate-strawberry-ice-cream-featured-1.jpg"
+                            alt="Strawberry">
+                    </div>
+                    <div class="details">
+                        <h2>Strawberry</h2>
+                        <h3>Rs.40</h3>
+                    </div>
+                    <div class="button">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://www.funfoodfrolic.com/wp-content/uploads/2020/04/Mango-Ice-Cream-Thumbnail-500x500.jpg"
+                            alt="Mango">
+                    </div>
+                    <div class="details">
+                        <h2>Mango</h2>
+                        <h3>Rs.40</h3>
+                    </div>
+                    <div class="button">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/butterscotch-ice-cream-recipe.jpg"
+                            alt="Butterscotch">
+                    </div>
+                    <div class="details">
+                        <h2>Butterscotch</h2>
+                        <h3>Rs.50</h3>
+                    </div>
+                    <div class="button">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://content.jdmagicbox.com/quickquotes/images_main/black-currant-ice-cream-jar-802298016-9t7e612q.jpg?impolicy=queryparam&im=Resize=(360,360),aspect=fit"
+                            alt="Black Current">
+                    </div>
+                    <div class="details">
+                        <h2>Black Current</h2>
+                        <h3>Rs.40</h3>
+                    </div>
+                    <div class="button">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://www.thechunkychef.com/wp-content/uploads/2023/07/Cotton-Candy-No-Churn-Ice-Cream-recipe-card.jpg"
+                            alt="Cotton Candy">
+                    </div>
+                    <div class="details">
+                        <h2>Cotton Candy</h2>
+                        <h3>Rs.45</h3>
+                    </div>
+                    <div class="button">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtbxNg5ghufYHoxcigwt0QdjROs3KafG_td_i02JFVNRG_OdHi6grN7i_-&s=10"
+                            alt="Pistachio">
+                    </div>
+                    <div class="details">
+                        <h2>Pistachio</h2>
+                        <h3>Rs.50</h3>
+                    </div>
+                    <div class="button">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://curlygirlkitchen.com/wp-content/uploads/2026/04/Homemade-Cookies-and-Cream-Oreo-Ice-Cream-001.jpg"
+                            alt="cookies and Cream">
+                    </div>
+                    <div class="details">
+                        <h2>Cookies and Cream</h2>
+                        <h3>Rs.45</h3>
+                    </div>
+                    <div class="button">
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
