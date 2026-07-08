@@ -8,22 +8,58 @@
     <style>
         #container {
             display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+
         }
 
         #top-container {
-            width: 1050px;
-            border: 1px solid gray;
-            background-color: whitesmoke transparent;
-            box-shadow: 4px 4px 10px grey;
-            justify-content: center;
-            text-align: center;
-            color: #ffffff;
-            font-size: 30px;
+            padding: 2rem;
+        }
 
+        .slider-wrapper {
+            position: relative;
+            max-width: 48rem;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+        }
+
+        .slider {
+            display: flex;
+            width: 400%;
+            animation: slide 12s infinite;
+        }
+
+        .slider img {
+            width: 25%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-nav {
+            display: flex;
+            column-gap: 1rem;
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .slider-nav a {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: white;
+            transition: opacity 0.25s;
         }
 
         #left-section {
-            width: 20%;
+            width: 250px;
+            flex-shrink: 0;
             background-color: bisque;
             border-right: 2px solid #ccc;
             padding-right: 20px;
@@ -34,15 +70,15 @@
             flex: 1;
             background-color: rgb(218, 193, 241);
             justify-content: center;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSfk1xJTrrlyE5gYriQlUTB1frpRz3ornCk-s1TW-fTkO7ozXz0P2B54&s=10);
             background-attachment: fixed;
             padding-left: 20px;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
 
         .card {
             padding: 20px;
-            width: 250px;
+            flex: 1 1 250px;
+            max-width: 280px;
             border: 1px solid gray;
             background-color: rgb(255, 255, 255);
             box-shadow: 4px 4px 10px grey;
@@ -102,13 +138,14 @@
 
         nav ul {
             display: flex;
+            justify-content: flex-end;
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
 
         nav li {
-            margin-right: 20px;
+            margin-left: 20px;
         }
 
         nav a {
@@ -119,6 +156,164 @@
 
         nav a:hover {
             color: #eb5555;
+        }
+
+        footer {
+            background-color: #c7afaf;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        @keyframes slide {
+
+            0%,
+            20% {
+                transform: translateX(0%);
+            }
+
+            25%,
+            45% {
+                transform: translateX(-25%);
+            }
+
+            50%,
+            70% {
+                transform: translateX(-50%);
+            }
+
+            75%,
+            95% {
+                transform: translateX(-75%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        body {
+            background-color: #c7afaf;
+        }
+
+        @media screen and (max-width:768px) {
+
+            nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            nav li {
+                margin: 10px;
+            }
+
+            #container {
+                flex-direction: column;
+            }
+
+            #left-section {
+                width: 100%;
+                border-right: none;
+                border-bottom: 2px solid #ccc;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+
+            #main-section {
+                width: 100%;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            #top-container {
+                padding: 1rem;
+            }
+
+            .slider-wrapper {
+                max-width: 100%;
+            }
+
+            .slider img {
+                height: 300px;
+            }
+
+            .card {
+                flex-basis: 45%;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+
+            nav {
+                padding: 10px;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            nav li {
+                margin: 0;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 3px 6px;
+            }
+
+            #container {
+                flex-direction: column;
+            }
+
+            #left-section,
+            #main-section {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            .header {
+                padding: 10px;
+            }
+
+            #top-container {
+                padding: 0;
+            }
+
+            .slider-wrapper {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .slider img {
+                height: 200px;
+            }
+
+            .product {
+                gap: 15px;
+            }
+
+            .card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            footer {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -135,7 +330,8 @@
     </nav>
     <div id="container">
         <aside id="left-section">
-            <h2>Welcome to Scoops !</h2>
+            <h1>Scoops</h1>
+            <h3>Welcome all !!</h3>
             <ul>
                 <li>Mini Cup</li>
                 <li>Jumbo cup</li>
@@ -147,8 +343,22 @@
         <main id="main-section">
             <div class="header">
                 <div id="top-container">
-                    <h1>Scoops Ice Cream</h1>
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <img
+                                src="https://kevaflavours.com/wp-content/uploads/2026/04/The-New-Era-of-Ice-Cream-Flavour-Innovation-Personalisation-Premiumisation-1024x635.jpg">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMWyqM2CRH2dPlOOZYQJJiq0S-FfC8X2KfuPNgM__MA9q-KwUr31KsMa0&s=10">
+
+                            <img
+                                src="https://img.magnific.com/free-vector/summer-sale-banner-template-with-chocolate-ice-cream-red_134830-949.jpg">
+
+                            <img
+                                src="https://foodsure.co.in/wp-content/uploads/2025/12/Popular-Flavors-in-Low-Calorie-Ice-Cream.jpg">
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <div class="product">
                 <div class="card">
@@ -271,6 +481,12 @@
             </div>
         </main>
     </div>
+    <footer>
+        <p>Thank you for visiting our website!</p>
+        <p>Copyright @ 2026 Scoops Ice Cream Shop</p>
+        <p>Call us on: 9876543210</p>
+        <p>Email us on: scoops@gmail.com</p>
+    </footer>
 </body>
 
 </html>
