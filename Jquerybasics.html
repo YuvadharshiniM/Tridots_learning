@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .container {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+   <div id="content">
+    Old html
+   </div>
+   <img id="logo" src="logo.png" alt="w3schools.com">
+   <input type="text" id="inputfield" value="Old value">
+   <div id="parent">
+    <p>
+        text1
+    </p>
+   </div>
+   <div id="remove">This is a div to be removed</div>
+   <div id="box">this is a box</div>
+      <div class="highlight" id="box2">this is box2</div>
+      <div class="highlight" id="box3">this is box3</div>
+      <div id="box4">this is box4</div>
+      <div class="container">
+        <button id="myButton">Click me</button>
+    </div>
+    <h1> sibling highlighting</h1>
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="special">item 4</div>
+    </div>
+    <script>
+       //html() 
+       //$('#content').html('<h1>New html content</h1>');
+       //text() 
+       //$('#content').text('New text content');
+       //attr() 
+        $('#logo').attr('src','newlogo.png');
+        $('#logo').attr('alt','newLogo');//the attribute value in the code will be changed . we can inspect and see that
+        //val()
+        $('#inputfield').val('New value');//the value in the code will be changed
+         //appaned()
+        $('#parent').append('<p>text2</p>');// will ad after the existing text1 in the parent div
+         //prepend()
+        $('#parent').prepend('<p>text0</p>');// will ad before the existing text1 in the parent div
+        //remove()
+        $('#remove').remove();
+        //addClass()
+        $('#box').addClass('highlight');//will add the class highlight to the box div
+        //removeClass()
+        $('#box2').removeClass('highlight');//will remove the class highlight from the box2 div
+        //toggleClass()
+        $('#box3').toggleClass('highlight');//will add the class highlight to the box3 div if it does not have it, and will remove it if it has it
+        $('#box4').toggleClass('highlight');
+        //parent()
+        $('#myButton').click(function(){
+            var parentele = $(this).parent();
+            parentele.toggleClass('highlight');
+        })
+        //siblings()
+        $('.item').click(function(){
+            $(this).siblings().toggleClass('highlight');
+            var specialItem = $(this).siblings('.special');
+            specialItem.css('color','red');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+    <div class="hoverDiv" style="width: 100px; height: 100px; background-color: lightgray;"></div>
+    <input type="text" id="myInput" placeholder="Focus on me">
+    <div id="parent">
+        <button class="child">Child Button 1</button>
+    </div>
+   <script>
+        //click() 
+        $('#myButton').click(function(){
+            alert("Button Clicked");
+        })
+        //hover()
+        $('.hoverDiv').hover(
+            function(){
+                $(this).css('background-color', 'lightblue');
+            },
+            function(){
+                $(this).css('background-color', 'lightgray');
+            }
+        )
+        //focus() 
+        $('#myInput').focus(function(){
+            $(this).css('border', '2px solid blue');
+        })
+        //blur()
+        $('#myInput').blur(function(){
+            $(this).css('border', '1px solid red');
+        })
+        //on()
+        $('#parent').on('click', '.child', function(){
+            alert("Child Button Clicked");
+        })
+        //off()
+        $('#parent').off('click', '.child');// used to remove the event handler for the child button click event
+         
+    </script>
+</body>
+</html>

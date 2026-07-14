@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://cloudflare.com">
     <title>Document</title>
     <style>
-        @media screen and (max-width:480px) {}
-
         .carousel-inner .item img {
             width: 100%;
             height: 650px;
@@ -20,6 +18,59 @@
 
         #carousel {
             margin: auto;
+        }
+
+        #portfolio {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        #portfolio .btn {
+            border-radius: 30px;
+            font-weight: 500;
+            transition: 0.3s ease;
+            text-align: center;
+            align-items: center;
+        }
+
+        #portfolio .btn:hover {
+            background-color: #0d6efd;
+            color: #fff;
+        }
+
+        .portfolio-img {
+            width: 100%;
+            max-width: 320px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #portfolio h3 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #portfolio hr {
+            margin-bottom: 30px;
+        }
+
+        #portfolio .col-md-4 {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width:768px) {
+
+            .portfolio-img {
+                max-width: 100%;
+                height: 220px;
+            }
+
+            #portfolio .btn {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -166,7 +217,7 @@
         </div>
     </section>
     <section class=" row">
-        <div style="margin-top: 30px; margin-bottom: 20px">
+        <div style="margin-top: 90px; margin-bottom: 20px">
             <p class="h2 text-decoration-underline text-center">Frequently Asked Questions</p>
         </div>
         <div class="col-sm-1">
@@ -221,7 +272,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-5" style="margin-top: 30px;">
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#home">Planning</a></li>
                 <li><a data-toggle="tab" href="#menu1">Design</a></li>
@@ -249,6 +300,115 @@
                 </div>
             </div>
         </div>
+        <div class="col-sm-1">
+
+        </div>
+    </section>
+    <section class="container" style="padding:50px 0;">
+
+        <h1 class="text-center" style="margin-bottom:50px;">Our Special Team</h1>
+
+        <div class="row">
+
+            <div class="col-sm-3 text-center">
+                <div style="border:1px solid #ddd; padding:15px; border-radius:5px;">
+                    <img src="https://st5.depositphotos.com/3396639/68093/i/450/depositphotos_680930438-stock-photo-half-length-portrait-cheerful-caucasian.jpg"
+                        class="img-responsive center-block" style="height:250px; width:100%; object-fit:cover;">
+                    <h3>Jade</h3>
+                    <p>Supervisor</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+
+            <div class="col-sm-3 text-center">
+                <div style="border:1px solid #ddd; padding:15px; border-radius:5px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2rJDrNZ2Bd3b22BQkqZCMpFKadvzHD--IFLDfWvVajmAGw2OQ84GHIC4U&s=10"
+                        class="img-responsive center-block" style="height:250px; width:100%; object-fit:cover;">
+                    <h3>Kristi</h3>
+                    <p>Manufacturing Head</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+
+            <div class="col-sm-3 text-center">
+                <div style="border:1px solid #ddd; padding:15px; border-radius:5px;">
+                    <img src="https://images.pexels.com/photos/29995728/pexels-photo-29995728/free-photo-of-professional-woman-in-white-blouse-portrait.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        class="img-responsive center-block" style="height:250px; width:100%; object-fit:cover;">
+                    <h3>Avanti</h3>
+                    <p>Designer</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+
+            <div class="col-sm-3 text-center">
+                <div style="border:1px solid #ddd; padding:15px; border-radius:5px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF__I56gPKqfpNWiRTBaiijKbU9sWAhgWoCQMTLzgaPWI3L4ZErmBlLa4m&s=100"
+                        class="img-responsive center-block" style="height:250px; width:100%; object-fit:cover;">
+                    <h3>Steve</h3>
+                    <p>Finance Head</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="portfolio" class="py-5">
+
+        <div class="container">
+
+
+            <h3 class="text-center">Our Portfolio</h3>
+            <hr class="w-25 mx-auto border border-2 border-primary">
+
+            <div class="d-flex justify-content-center flex-wrap gap-3 mb-5"
+                style="padding-left:410px; padding-bottom: 20px">
+                <a href="#" class="btn btn-outline-primary rounded-pill px-4">All</a>
+                <a href="#" class="btn btn-outline-primary rounded-pill px-4">Department</a>
+                <a href="#" class="btn btn-outline-primary rounded-pill px-4">Design</a>
+                <a href="#" class="btn btn-outline-primary rounded-pill px-4">Photoshop</a>
+            </div>
+
+            <div class="row justify-content-center g-4 mb-4">
+
+                <div class="col-md-4 text-center">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2024-01-25-at-12-07-59-pm-65b29574d11c6.png?crop=0.5755102040816327xw:1xh;center,top"
+                        class="portfolio-img" alt="">
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_c5_BnSq8N2grD_96wHhohAxGAtRtr1BxNog5U03eEBgSlpbHrk_5lkrk&s=10"
+                        class="portfolio-img" alt="">
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3xeup88Pw1pcLyeZA-BCrFrFDma1hYlNaTQY8ru3yL43MiLrfUh-R1sc&s=10"
+                        class="portfolio-img" alt="">
+                </div>
+
+            </div>
+            <div class="row justify-content-center g-4 mt-4" style="margin-top: 40px;">
+
+                <div class="col-md-4 text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXeAYfFdgbCIkit4Rn4qH2YWnilMG8QJ73OcMDWsKnPOlrzAzBvWw5s5Eg&s=10"
+                        class="portfolio-img" alt="">
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToShkhTX2qszHsue6MwFoWrRAwmkSo4jsmkwa5tCvkI711bRNAuwZy1BA&s=10"
+                        class="portfolio-img" alt="">
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtHYf_kq6GDjbbB-pFVWF9G1Sdzj_-CHOB-YD6lZYbyMlCUmnKFRFNBwbH&s=10"
+                        class="portfolio-img" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 </body>
